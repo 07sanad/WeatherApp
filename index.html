@@ -8,43 +8,21 @@
     <link rel="stylesheet" href="./main.css">
 </head>
 <body>
-    <div class="container">
+    <section class="container">
         <div class="content">
-            <div class="one">
-                <div class="status">
-                    <div class="temp">25<span>°c</span></div>
-                    <div class="weather">Sunny</div>
-                </div>
-                <section class="location">
-                    <div class="city">Lagos, Nigeria</div>
-                    <div class="date">Friday 7 October 2022</div>
-                    <div class="hi-low">13°c / 16°c</div>
-                </section>
-            </div>
-            <div class="two">
-                <div class="status">
-                    <div class="temp">25<span>°c</span></div>
-                    <div class="weather">Cloudy</div>
-                </div>
-                <section class="location">
-                    <div class="city">Lagos, Nigeria</div>
-                    <div class="date">Friday 7 October 2022</div>
-                    <div class="hi-low">13°c / 16°c</div>
-                </section>
-            </div>
-            <div class="three">
-                <div class="status">
-                    <div class="temp">25<span>°c</span></div>
-                    <div class="weather">Rainy</div>
-                </div>
-                <section class="location">
-                    <div class="city">Lagos, Nigeria</div>
-                    <div class="date">Friday 7 October 2022</div>
-                    <div class="hi-low">13°c / 16°c</div>
-                </section>
-            </div>
+            <h2 class="heading">Weather App</h2>
+            <form action="input-form">
+                <input type="text" placeholder="Search for cities" class="inputVal" autofocus>
+                <button class="submitBtn">Submit</button>
+                <span class="text"></span>
+            </form>
+        </div>  
+    </section>
+    <section class="location">
+        <div class="status">
+            <ul class="cities"></ul>
         </div>
-    </div>
+    </section>
     
 </body>
 <script src="./main.js"></script>
