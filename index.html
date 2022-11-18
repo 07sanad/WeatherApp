@@ -1,51 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Weather App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,
+    400;0,700;0,800;0,900;1,400;1,800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./main.css">
 </head>
+
 <body>
-    <div class="container">
-        <div class="content">
-            <div class="one">
-                <div class="status">
-                    <div class="temp">25<span>°c</span></div>
-                    <div class="weather">Sunny</div>
-                </div>
-                <section class="location">
-                    <div class="city">Lagos, Nigeria</div>
-                    <div class="date">Friday 7 October 2022</div>
-                    <div class="hi-low">13°c / 16°c</div>
-                </section>
-            </div>
-            <div class="two">
-                <div class="status">
-                    <div class="temp">25<span>°c</span></div>
-                    <div class="weather">Cloudy</div>
-                </div>
-                <section class="location">
-                    <div class="city">Lagos, Nigeria</div>
-                    <div class="date">Friday 7 October 2022</div>
-                    <div class="hi-low">13°c / 16°c</div>
-                </section>
-            </div>
-            <div class="three">
-                <div class="status">
-                    <div class="temp">25<span>°c</span></div>
-                    <div class="weather">Rainy</div>
-                </div>
-                <section class="location">
-                    <div class="city">Lagos, Nigeria</div>
-                    <div class="date">Friday 7 October 2022</div>
-                    <div class="hi-low">13°c / 16°c</div>
-                </section>
-            </div>
+    <div class="header">
+        <h2 class="App-weather"> Weather App</h2>
+        <div class="search-input">
+            <input type="text" autocomplete="off" class="search" placeholder="Search for a city..." />    
         </div>
-    </div>
-    
+        <div class="location">
+            <h3 class="cityName">Lagos</h3>
+            <div class="date">Tuesday, November 2022</div>
+            <div class="current">
+                <div class="temp">25<span>&#176c</span></div>
+                <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="icon" width="250" height="250" class="icon"> 
+                <div class="condition">Sunny</div>
+            </div> 
+        </div>
+    </div> 
+    <main>
+        <section class="weather" >
+            <div class="daily-weather">
+                <span class="day">Tuesday</span>
+                <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="icon" class="condition" width="100" height="100">
+                <div class="temp">25<span>&#176c</span></div>
+            </div>
+            <div class="daily-weather">
+                <span class="day">Wednesday</span>
+                <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="icon" class="condition" width="100" height="100">
+                <div class="temp">25<span>&#176c</span></div>
+            </div>
+            <div class="daily-weather">
+                <span class="day">Thursday</span>
+                <img src="http://openweathermap.org/img/wn/09d@2x.png" alt="icon" class="condition" width="100" height="100">
+                <div class="temp">25<span>&#176c</span></div>
+            </div>
+            <div class="daily-weather">
+                <span class="day">Friday</span>
+                <img src="http://openweathermap.org/img/wn/09d@2x.png" alt="icon" class="condition" width="100" height="100">
+                <div class="temp">25<span>&#176c</span></div>
+            </div>
+            <div class="daily-weather">
+                <span class="day">Saturday</span>
+                <img src="http://openweathermap.org/img/wn/13d@2x.png" alt="icon" class="condition" width="100" height="100">
+                <div class="temp">25<span>&#176c</span></div>
+            </div>
+        </section>
+    </main>
 </body>
 <script src="./main.js"></script>
+
 </html>
