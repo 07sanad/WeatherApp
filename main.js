@@ -4,7 +4,7 @@ const api = {
   key: "585486ed6c421140c34e0a0213bc2ae8",
   base: "https://api.openweathermap.org/data/2.5/",
 };
-const searchbox = document.querySelector(".search-box");
+const searchbox = document.querySelector(".search");
 searchbox.addEventListener("keypress", search);
 
 function search(evt) {
@@ -23,7 +23,7 @@ function getInput(query) {
 
 function showResults(weather) {
   console.log(weather);
-  let city = document.querySelector(".location .city-info .cityName");
+  let city = document.querySelector(".location .cityName");
   city.innerText = `${weather.name}, ${weather.sys.country}`;
 
   let now = new Date();
@@ -32,13 +32,13 @@ function showResults(weather) {
 
   
 
-  let temp = document.querySelector(".location .city-info .temp");
+  let temp = document.querySelector(".location .current .temp");
   temp.innerHTML = `${Math.round(weather.main.temp)}<span>&#176c</span>`;
 
   let icon = document.querySelector(".location .icon");
-  icon.innerHTML = weather.weather[0].icon;
+  icon.innerHTML = weather.location.current.weather[0].icon;
  
-  let weather_el = document.querySelector(".location .condition");
+  let weather_el = document.querySelector(".location .current .condition");
   weather_el.innerText = weather.weather[0].main;
 
 }
@@ -77,7 +77,7 @@ function dateBuilder(d) {
   let month = months[d.getMonth()];
   let year = d.getFullYear();
 
-  return ` ${hour}:${minute}
+  return `  ${hour}:${minute}
   ${date} ${day} ${month} ${year} `;
 }
 
